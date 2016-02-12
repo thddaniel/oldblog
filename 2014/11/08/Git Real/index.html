@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Git Real | 唐昊的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="STAGING &amp;amp; REMOTESUNSTAGED DIFFERENCES
+A new file has been added to the site. Run the command to see what all has changed since your last commit.
+
+git status will list out which files have changed.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git Real">
+<meta property="og:url" content="http://tanghaoblog.me/2014/11/08/Git Real/index.html">
+<meta property="og:site_name" content="唐昊的博客">
+<meta property="og:description" content="STAGING &amp;amp; REMOTESUNSTAGED DIFFERENCES
+A new file has been added to the site. Run the command to see what all has changed since your last commit.
+
+git status will list out which files have changed.">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/1.pull.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/3.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/4.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/7.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/8.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/5.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/6.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/9.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/10.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/11.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/12.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/13.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/14.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/15.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/16.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git Real">
+<meta name="twitter:description" content="STAGING &amp;amp; REMOTESUNSTAGED DIFFERENCES
+A new file has been added to the site. Run the command to see what all has changed since your last commit.
+
+git status will list out which files have changed.">
+  
+    <link rel="alternative" href="/atom.xml" title="唐昊的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/thddaniel/thddaniel.github.io/master/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://raw.githubusercontent.com/thddaniel/thddaniel.github.io/master/img/anonymous.jpg">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Tang Hao</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
+					
+						<li><a href="/">主页</a></li>
+			        
+						<li><a href="/archives">所有文章</a></li>
+			        
+						<li><a href="/instagram">相册</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/thddaniel" title="github">github</a>
+				        
+							<a class="quora" target="_blank" href="http://www.quora.com/Daniel-Hao-2" title="quora">quora</a>
+				        
+							<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+				        
+							<a class="email" target="_blank" href="mailto:thddaniel92@gmail.com" title="email">email</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="/tags/Open-Courses/" style="font-size: 20px;">Open Courses</a><a href="/tags/git/" style="font-size: 15px;">git</a><a href="/tags/创业/" style="font-size: 10px;">创业</a><a href="/tags/思维/" style="font-size: 15px;">思维</a><a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a><a href="/tags/理财/" style="font-size: 10px;">理财</a><a href="/tags/计算机原理/" style="font-size: 15px;">计算机原理</a><a href="/tags/记忆力/" style="font-size: 15px;">记忆力</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://raw.githubusercontent.com/thddaniel/thddaniel.github.io/master/img/anonymous.jpg">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">Tang Hao</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/instagram">相册</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/thddaniel" title="github">github</a>
+			        
+						<a class="quora" target="_blank" href="http://www.quora.com/Daniel-Hao-2" title="quora">quora</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+						<a class="email" target="_blank" href="mailto:thddaniel92@gmail.com" title="email">email</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-Git Real" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/11/08/Git Real/" class="article-date">
+  	<time datetime="2014-11-08T12:18:00.000Z" itemprop="datePublished">2014-11-08</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git Real
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+              
+              <!-- 文章目录开始 -->
+                
+                  <div id="toc" class="toc-article">
+                      <strong class="toc-title">目录Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#STAGING_&_REMOTES"><span class="toc-number">1.</span> <span class="toc-text">STAGING & REMOTES</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UNSTAGED_DIFFERENCES"><span class="toc-number">1.1.</span> <span class="toc-text">UNSTAGED DIFFERENCES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#STAGE_NEW_FILE"><span class="toc-number">1.2.</span> <span class="toc-text">STAGE NEW FILE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#STAGED_DIFFERENCES"><span class="toc-number">1.3.</span> <span class="toc-text">STAGED DIFFERENCES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UNSTAGE_FILES"><span class="toc-number">1.4.</span> <span class="toc-text">UNSTAGE FILES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SKIP_STAGING"><span class="toc-number">1.5.</span> <span class="toc-text">SKIP STAGING</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ADD_TO_COMMIT"><span class="toc-number">1.6.</span> <span class="toc-text">ADD TO COMMIT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ROLL_BACK_COMMIT"><span class="toc-number">1.7.</span> <span class="toc-text">ROLL BACK COMMIT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DISCARD_CHANGES"><span class="toc-number">1.8.</span> <span class="toc-text">DISCARD CHANGES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REMOVE_COMMIT"><span class="toc-number">1.9.</span> <span class="toc-text">REMOVE COMMIT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NEW_REMOTE_REPOS_AND_PUSH"><span class="toc-number">1.10.</span> <span class="toc-text">NEW REMOTE REPOS AND PUSH</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CLONING_&_BRANCHING"><span class="toc-number">2.</span> <span class="toc-text">CLONING & BRANCHING</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CLONE_A_REPO"><span class="toc-number">2.1.</span> <span class="toc-text">CLONE A REPO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LIST_REMOTES"><span class="toc-number">2.2.</span> <span class="toc-text">LIST REMOTES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CREATE_A_BRANCH"><span class="toc-number">2.3.</span> <span class="toc-text">CREATE A BRANCH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SWITCH_TO_BRANCH"><span class="toc-number">2.4.</span> <span class="toc-text">SWITCH TO BRANCH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#COMBINE_BRANCH"><span class="toc-number">2.5.</span> <span class="toc-text">COMBINE BRANCH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BRANCH_SHORTCUTS"><span class="toc-number">2.6.</span> <span class="toc-text">BRANCH SHORTCUTS</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#COLLABORATION_BASICS"><span class="toc-number">3.</span> <span class="toc-text">COLLABORATION BASICS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SEND_CHANGES"><span class="toc-number">3.1.</span> <span class="toc-text">SEND CHANGES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GET_CHANGES"><span class="toc-number">3.2.</span> <span class="toc-text">GET CHANGES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FIX_CONFLICTS"><span class="toc-number">3.3.</span> <span class="toc-text">FIX CONFLICTS</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BRANCHING"><span class="toc-number">4.</span> <span class="toc-text">BRANCHING</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PUSH_BRANCH"><span class="toc-number">4.1.</span> <span class="toc-text">PUSH BRANCH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GET_REMOTE_BRANCH"><span class="toc-number">4.2.</span> <span class="toc-text">GET REMOTE BRANCH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REMOTE_BRANCHES"><span class="toc-number">4.3.</span> <span class="toc-text">REMOTE BRANCHES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DELETE_ON_REMOTE"><span class="toc-number">4.4.</span> <span class="toc-text">DELETE ON REMOTE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BRANCH_STATUS"><span class="toc-number">4.5.</span> <span class="toc-text">BRANCH STATUS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CLEAN_BRANCHES"><span class="toc-number">4.6.</span> <span class="toc-text">CLEAN BRANCHES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LIST_TAGS"><span class="toc-number">4.7.</span> <span class="toc-text">LIST TAGS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CREATE_TAG"><span class="toc-number">4.8.</span> <span class="toc-text">CREATE TAG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SEND_TAGS"><span class="toc-number">4.9.</span> <span class="toc-text">SEND TAGS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RETRIEVE_TAG"><span class="toc-number">4.10.</span> <span class="toc-text">RETRIEVE TAG</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#REBASE_BELONG_TO_US"><span class="toc-number">5.</span> <span class="toc-text">REBASE BELONG TO US</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#REBASE"><span class="toc-number">5.1.</span> <span class="toc-text">REBASE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REMOTE"><span class="toc-number">5.2.</span> <span class="toc-text">REMOTE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CONFLICT"><span class="toc-number">5.3.</span> <span class="toc-text">CONFLICT</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HISTORY_AND_CONFIGURATION"><span class="toc-number">6.</span> <span class="toc-text">HISTORY AND CONFIGURATION</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#EXCLUDING"><span class="toc-number">6.1.</span> <span class="toc-text">EXCLUDING</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REMOVING"><span class="toc-number">6.2.</span> <span class="toc-text">REMOVING</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CONFIG"><span class="toc-number">6.3.</span> <span class="toc-text">CONFIG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ALIASES"><span class="toc-number">6.4.</span> <span class="toc-text">ALIASES</span></a></li></ol></li></ol>
+                  </div>
+                
+             <!-- 文章目录结束 -->
+ 
+        
+        <h1 id="STAGING_&amp;_REMOTES"><strong>STAGING &amp; REMOTES</strong></h1><h2 id="UNSTAGED_DIFFERENCES"><strong>UNSTAGED DIFFERENCES</strong></h2><blockquote>
+<p>A new file has been added to the site. Run the command to see what all has changed since your last commit.</p>
+</blockquote>
+<p><code>git status</code> will list out which files have changed. If we want to see the actual changes:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> diff</span><br></pre></td></tr></table></figure></p>
+<h2 id="STAGE_NEW_FILE"><strong>STAGE NEW FILE</strong></h2><blockquote>
+<p>There it is: <code>ostrich.html</code>. Stage it to be committed.</p>
+</blockquote>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> ostrich.html</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="STAGED_DIFFERENCES"><strong>STAGED DIFFERENCES</strong></h2><blockquote>
+<p>We’ve added <code>ostrich.html</code> to the staging area, but your co-worker has stopped by and asked to see the new page first. Run a <code>diff</code> on the staged changes.</p>
+</blockquote>
+<p><code>git diff</code> is great for seeing <strong>unstaged differences</strong> since last commit, but you need the <code>--staged</code> option in order to see staged changes.<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff <span class="comment">--staged</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="UNSTAGE_FILES"><strong>UNSTAGE FILES</strong></h2><blockquote>
+<p>“Wait,” says the co-worker. “They didn’t tell you? The client “wants the ostrich section pulled - they couldn’t get a license to “sell them.” Better unstage <code>ostrich.html</code>.<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> reset HEAD ostrich.html</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="SKIP_STAGING"><strong>SKIP STAGING</strong></h2><blockquote>
+<p>We’ve modified the <code>index.html</code> file, adding a link to the cats section. Since that file is already tracked, you can just skip staging and commit it with one command.</p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -<span class="tag">a</span> -m <span class="string">"index.html adding a link"</span></span><br></pre></td></tr></table></figure>
+<p><code>-a</code>: Add changes from all tracked files. Doesn’t add new(untracked) files.</p>
+<h2 id="ADD_TO_COMMIT"><strong>ADD TO COMMIT</strong></h2><blockquote>
+<p>Whoops! We forgot to add the <code>cats.html</code> page that <code>index.html</code> links to, and it should really be <code>amended</code> on the same commit. To do this, let’s first stage <code>cats.html</code>.</p>
+</blockquote>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> cats.html</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Second, let’s add <code>cats.html</code> to the prior commit and change the commit message in one step.<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> commit --amend -m <span class="string">"modified index.html &amp; add cats.html"</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>You don’t want to make a new commit, you want to amend the previous one, so what I’m trying to say is: Use the amend option(<strong>add to the last commit</strong>)<br>Whatever has been staged is added to last commit!</p>
+<h2 id="ROLL_BACK_COMMIT"><strong>ROLL BACK COMMIT</strong></h2><blockquote>
+<p>Wait, you’re getting word that the cats section might be cancelled. <strong>Undo the commit, and put the files back in staging.</strong></p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="operator"><span class="keyword">reset</span> <span class="comment">--soft HEAD^</span></span></span><br></pre></td></tr></table></figure>
+<p><code>soft</code>: Reset into staging<br><code>HEAD^</code>: Move to commit before ‘HEAD’<br>Now I can make changes, and re-commit</p>
+<h2 id="DISCARD_CHANGES"><strong>DISCARD CHANGES</strong></h2><blockquote>
+<p>Forget the whole thing - the client’s license to sell cats is suspended during some kind of “investigation”. Discard your changes to <code>cats.html</code> and <code>index.html</code>.</p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- cats<span class="class">.html</span> index.html</span><br></pre></td></tr></table></figure>
+<p>Blow away all changes since last commit.</p>
+<h2 id="REMOVE_COMMIT"><strong>REMOVE COMMIT</strong></h2><blockquote>
+<p>1.The next feature is a banner on the main page, saying the pet shop will soon be offering badgers. Add and commit <code>index.html</code> in one step, skipping the staging area.<br>2.Your co-worker is back, looking sheepish. “Never mind the badgers ad. The client’s legal department said that was a liability risk.” <strong>You’ll need to remove the most recent commit, and all its changes.</strong></p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="operator"><span class="keyword">commit</span> -am <span class="string">"add index.html"</span></span><br><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard HEAD^</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="NEW_REMOTE_REPOS_AND_PUSH"><strong>NEW REMOTE REPOS AND PUSH</strong></h2><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote add <span class="variable">&lt;name&gt;</span> <span class="variable">&lt;address&gt;</span> /<span class="keyword">*</span>To add new remotes<span class="keyword">*</span>/</span><br><span class="line">git remote rm <span class="variable">&lt;name&gt;</span> /<span class="keyword">*</span>To remove remotes<span class="keyword">*</span>/</span><br><span class="line">git remote -v /<span class="keyword">*</span>show remote repositories<span class="keyword">*</span>/</span><br><span class="line">git push -u <span class="variable">&lt;name&gt;</span> <span class="variable">&lt;branch&gt;</span> /<span class="keyword">*</span>To push to remotes. The -u tells Git to remember the parameters, so that next time we can simply run git push <span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="CLONING_&amp;_BRANCHING"><strong>CLONING &amp; BRANCHING</strong></h1><h2 id="CLONE_A_REPO"><strong>CLONE A REPO</strong></h2><blockquote>
+<p>The IT department installed an OS update on your workstation - and wiped the hard drive in the process. Clone the Pet Shop repo from <code>git@example.com:example/petshop.git</code> so you can resume work.</p>
+</blockquote>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git<span class="annotation">@example</span>.<span class="string">com:</span>example/petshop.git</span><br></pre></td></tr></table></figure>
+<h2 id="LIST_REMOTES"><strong>LIST REMOTES</strong></h2><blockquote>
+<p>Our repo is cloned locally, but how do we check to a list of our remotes? Lets get a list of all our remotes with a verbose output.</p>
+</blockquote>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v /<span class="keyword">*</span>show remote repositories<span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<h2 id="CREATE_A_BRANCH"><strong>CREATE A BRANCH</strong></h2><blockquote>
+<p>We need to add a section for the pet grooming salon on the site. You want to isolate this new feature from your other work. Create a new branch named <code>grooming</code>.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> branch grooming</span><br></pre></td></tr></table></figure>
+<h2 id="SWITCH_TO_BRANCH"><strong>SWITCH TO BRANCH</strong></h2><blockquote>
+<p>You’ve made the new branch, but your commits are still going to the old one. Switch to the <code>grooming</code> branch.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> checkout grooming</span><br></pre></td></tr></table></figure>
+<h2 id="COMBINE_BRANCH"><strong>COMBINE BRANCH</strong></h2><blockquote>
+<p>You’ve finished work on the <code>grooming</code> branch and are ready to bring your work back into <code>master</code>. First, check out the master branch…<br>Then,bring your changes from the grooming branch into the …master branch.</p>
+</blockquote>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git <span class="keyword">merge</span> grooming</span><br><span class="line">git branch -<span class="keyword">d</span> grooming <span class="comment">/*delete the local branch*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="BRANCH_SHORTCUTS"><strong>BRANCH SHORTCUTS</strong></h2><blockquote>
+<p>The pet shop wants to try selling yet another product line! Let’s do this one in a branch in case it gets cancelled like the others. Using a single command, create and check out an <code>octopus</code> branch.</p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -<span class="tag">b</span> octopus</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="COLLABORATION_BASICS"><strong>COLLABORATION BASICS</strong></h1><h2 id="SEND_CHANGES"><strong>SEND CHANGES</strong></h2><blockquote>
+<p>You’ve committed some work so now it’s time to share! Push it out for your co-workers to see.</p>
+</blockquote>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure>
+<h2 id="GET_CHANGES"><strong>GET CHANGES</strong></h2><blockquote>
+<p>Looks like your co-worker pushed some changes before you did! Your push was rejected. Retrieve the latest changes, and merge them into your branch in one step.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> pull</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/1.pull.jpg" alt="1.pull"></p>
+<h2 id="FIX_CONFLICTS"><strong>FIX CONFLICTS</strong></h2><blockquote>
+<p>Git is reporting a conflict with your co-worker’s changes in “readme”. Just discard his changes, and keep your own (the HEAD).</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/2.jpg" alt="2"><br><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/3.jpg" alt="3"><br><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/4.jpg" alt="4"></p>
+<p><br></p>
+<h1 id="BRANCHING"><strong>BRANCHING</strong></h1><h2 id="PUSH_BRANCH"><strong>PUSH BRANCH</strong></h2><blockquote>
+<p>A new kind of pet is for sale at the store! Maybe this one will catch on with the public. You’ve committed your work to the local <code>hamsters</code> branch; now publish this branch in the <code>origin</code> repo.</p>
+</blockquote>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">push</span> origin hamsters</span><br></pre></td></tr></table></figure>
+<p>Links locak branch to the remote branch(tracking)</p>
+<h2 id="GET_REMOTE_BRANCH"><strong>GET REMOTE BRANCH</strong></h2><blockquote>
+<p>“git branch -r” does not query the remotes to check for new branches. In order to see a new remote branch you first have to do a fetch or a pull. So retrieve the remote “weasel” branch.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> fetch</span><br></pre></td></tr></table></figure>
+<p>Pull seems like a good choice, but pull will auto merge branches, you only want to update your local branch information, so use fetch instead</p>
+<h2 id="REMOTE_BRANCHES"><strong>REMOTE BRANCHES</strong></h2><blockquote>
+<p>Your co-worker said he wants you to look over a new branch on “origin”, but he didn’t tell you its name. Get a list of remote branches.</p>
+</blockquote>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r /<span class="keyword">*</span>list all remote branches<span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<h2 id="DELETE_ON_REMOTE"><strong>DELETE ON REMOTE</strong></h2><blockquote>
+<p>Guess how the product launch went with the weasels? Better delete the “weasel” branch on “origin”.</p>
+</blockquote>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">push</span> origin :weasel</span><br></pre></td></tr></table></figure>
+<p>Use git push to delete the <strong>remote branch</strong></p>
+<h2 id="BRANCH_STATUS"><strong>BRANCH STATUS</strong></h2><blockquote>
+<p>Wait, did you already pull that branch locally? Check for stale branches that are tracking “origin”.</p>
+</blockquote>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote show origin /* show the <span class="keyword">state</span> of your branches*/</span><br></pre></td></tr></table></figure>
+<h2 id="CLEAN_BRANCHES"><strong>CLEAN BRANCHES</strong></h2><blockquote>
+<p>You still have a stale local branch tracking the now-deleted <code>origin/weasel</code>. Clean up your local references.</p>
+</blockquote>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote prune origin /<span class="keyword">*</span> remove deleted remote<span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<h2 id="LIST_TAGS"><strong>LIST TAGS</strong></h2><blockquote>
+<p>With the weasel threat eliminated, the pet store wants to deploy the site. Let’s see, what was the previous version number? Display the tags to find out.Create a tag accordingly</p>
+</blockquote>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">tag</span>  /*<span class="keyword">list</span> <span class="keyword">all</span> <span class="keyword">tags</span>*/</span><br></pre></td></tr></table></figure>
+<h2 id="CREATE_TAG"><strong>CREATE TAG</strong></h2><blockquote>
+<p>Ah, yes, the last release was “v1.3.1”. You’ve added the hamsters, so it would be best to release this as “v1.3.2”. Create a tag accordingly.</p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -<span class="tag">a</span> v1.<span class="number">3.2</span> -m <span class="string">"version 0.03"</span>  <span class="comment">/*add a new tag*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="SEND_TAGS"><strong>SEND TAGS</strong></h2><blockquote>
+<p>Push your tag to origin.</p>
+</blockquote>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push <span class="comment">--tags</span></span><br></pre></td></tr></table></figure>
+<h2 id="RETRIEVE_TAG"><strong>RETRIEVE TAG</strong></h2><blockquote>
+<p>The client is requesting that you roll back to the prior release. (Seriously? What could have gone wrong with the hamsters?) Retrieve the release tagged “v1.3.1”.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> checkout v1.<span class="number">3</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="REBASE_BELONG_TO_US"><strong>REBASE BELONG TO US</strong></h1><h2 id="REBASE"><strong>REBASE</strong></h2><p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/7.jpg" alt="7"><br><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/8.jpg" alt="8"></p>
+<blockquote>
+<p>You’ve made some commits to a feature branch, but you’ve also committed a hotfix on master that would make a merge messy. Check out the <code>kennel</code> branch so you can rebase it on <code>master</code>.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> checkout kennel</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>OK, you’re on the <code>kennel</code> branch. Our goal is to be able to merge <code>kennel</code> back into <code>master</code> without conflicts or a merge commit. Rebase the current <code>kennel</code> branch on <code>master</code>.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> rebase master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>With the rebase complete, <code>kennel</code> should merge with <code>master</code> cleanly. Switch branches back to <code>master</code>.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> checkout master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>We’re on master, and we know the <code>kennel</code> will merge cleanly. Go ahead and merge in the <code>kennel</code> branch.</p>
+</blockquote>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">merge</span> kennel</span><br></pre></td></tr></table></figure>
+<h2 id="REMOTE"><strong>REMOTE</strong></h2><blockquote>
+<p>Your co-worker has pushed changes to the <code>master</code> branch on the <code>origin</code> repo. Retrieve it without merging it so we can replay our work on top of it.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> fetch</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/5.jpg" alt="5"></p>
+<blockquote>
+<p>Now that your local repo knows of the latest changes on origin/master, move your master commits after the commits from origin/master.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> rebase</span><br></pre></td></tr></table></figure>
+<p>Use <code>git rebase</code> to apply your local commits ahead of those on origin/master.Current branch master is up to date. Success!<br><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/6.jpg" alt="6"></p>
+<h2 id="CONFLICT"><strong>CONFLICT</strong></h2><p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/9.jpg" alt="9"></p>
+<blockquote>
+<p>Your co-worker has pushed before you yet again. Better fetch the changes…</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> fetch</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Now run another rebase to move your commit after the latest fetched one.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> rebase</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Uh, oh! Looks like the rebase is in conflict this time! Edit <code>index.html</code> to fix the conflicting lines. We want to keep our version with <code>Cats</code> and <code>Dogs</code>.</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset="UTF-8"&gt;</span><br><span class="line">    &lt;title&gt;Our Cat-alog&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;nav&gt;</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD   &lt;!--删除 --&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="cat.html"&gt;Cats&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="dog.html"&gt;Dogs&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">======= &lt;!--删除 --&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="cat.html"&gt;Felines&lt;/a&gt;&lt;/li&gt;   &lt;!--删除 --&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="dog.html"&gt;Canines&lt;/a&gt;&lt;/li&gt;   &lt;!--删除 --&gt;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; Add dogs.  &lt;!--删除 --&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">    &lt;/nav&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Now mark the conflicts in “index.html” as resolved.</p>
+</blockquote>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> <span class="keyword">index</span>.html</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Now that all conflicts have been resolved and those files added, continue the current rebase in process.</p>
+</blockquote>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase --<span class="keyword">continue</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="HISTORY_AND_CONFIGURATION"><strong>HISTORY AND CONFIGURATION</strong></h1><blockquote>
+<p>1.All those e-mail addresses and SHAs are making it hard to see commit messages in your history. Try viewing the log with one commit per line.</p>
+</blockquote>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="command">log</span> <span class="comment">--pretty=oneline</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2.The client called with an urgent question about chew toys, and now you can’t remember what you last modified. Bring up a summary of file changes.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> diff</span><br></pre></td></tr></table></figure>
+<p>‘git log’ will show you your past commits, but it doesn’t show you any changes in files, that’s what ‘git diff’ is for.</p>
+<blockquote>
+<p>3.You’ve finished adding elephants to the catalog. You need to write up a change log for the client, and you want to ensure you don’t miss anything. Compare the <code>master</code> branch to your <code>elephant</code> branch to show what’s new.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> diff master elephant</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>4.You rebased your latest commit after a commit from your co-worker, but now the page is rendering strangely. To figure out why, get a diff that includes the previous commit, as well as its parent.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> diff HEAD~<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>5.Well, you see the changes, but you’re not sure what your co-worker was trying to accomplish. Display the diffs along with the log to determine what’s going on.</p>
+</blockquote>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="command">log</span> -p</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>6.Wait, what? You don’t understand these lines in <code>index.html</code>. You’d better find out who committed them, so you can ask them what they’re supposed to do.</p>
+</blockquote>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git blame <span class="keyword">index</span>.html</span><br></pre></td></tr></table></figure>
+<p>Use <code>git blame</code> to see the annotated source, so you can figure out who made all these changes</p>
+<h2 id="EXCLUDING"><strong>EXCLUDING</strong></h2><p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/10.jpg" alt="10"><br><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/11.jpg" alt="11"></p>
+<h2 id="REMOVING"><strong>REMOVING</strong></h2><p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/12.jpg" alt="12"><br><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/13.jpg" alt="13"></p>
+<h2 id="CONFIG"><strong>CONFIG</strong></h2><p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/14.jpg" alt="14"></p>
+<h2 id="ALIASES"><strong>ALIASES</strong></h2><p><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/15.jpg" alt="15"><br><img src="https://raw.githubusercontent.com/thddaniel/Myblog/master/image/git/16.jpg" alt="16"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/11/09/Git Real 2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          Git Real 2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/10/31/How to start a startup/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">How to start a startup</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Git Real" data-title="Git Real" data-url="http://tanghaoblog.me/2014/11/08/Git Real/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Tang Hao
+            <a href="mailto:thddaniel92@gmail.com" >发邮件</a>
+            
+         
+            
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Code <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Theme</a> by Litten
+      	</div>
+    
+        <div>
+        <form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+         搜索:<input type="search" name="q" id="search" autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="18" placeholder="关键字" />
+         <input type="hidden" name="q" value="site:tanghaoblog.me">
+        </form>
+        </div>
+        
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="/js/main.js" type="text/javascript"></script> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61735277-1', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+
+  </div>
+</body>
+</html>
